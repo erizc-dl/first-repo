@@ -1,5 +1,17 @@
 """Top commands in Git classified in a list."""
 
+import time as t
+
+# Trint() for decorative purposes
+def trint(text, interval = 0.0355):
+    t.sleep(interval)
+    print(text)
+
+def command_input():
+    # Asks the user for a command
+    command = input("Enter your command (1-10): ")
+    return command
+
 commands = [
     "git init", 
     "git clone", 
@@ -38,10 +50,11 @@ command_purpose = [
     "git push: pdates the remote repository with any commits made locally to a branch.",
     "git config: creates an alias for contributor and commands."
 ]
-print(list_of_commands)
+
+trint(list_of_commands)
 
 # Asks the user for a command
-command = input("Enter your command (1-10): ")
+command = command_input()
 
 # Validate user's input
 while not command.isdigit() or not (1 <= int(command) <= 10):
@@ -52,7 +65,7 @@ index = int(command) - 1
 
 # Return final command
 selected_command = commands[index]
-print(f"You have selected {selected_command}.")
+trint(f"You have selected {selected_command}.")
 
 # Print out the description of commands
-print(command_purpose[index])
+trint(command_purpose[index])
