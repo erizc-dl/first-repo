@@ -11,7 +11,10 @@ commands = [
     "git pull", 
     "git push"]
 
-command = input("Enter your command: ")
+list_of_commands = "Top Git Commands: \n1. git init \n2. git clone \n3. git add \n4. git commit \n5. git status \n6. git branch \n7. git merge \n8. git pull \n9. git push \n"
+print(list_of_commands)
+
+command = input("Enter your command (1-9): ")
 
 if command in commands:
     print("Valid command")
